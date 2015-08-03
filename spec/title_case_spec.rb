@@ -6,13 +6,16 @@ describe('String#title_case') do
     expect(("dog").title_case()).to(eq("Dog"))
   end
 
-  it('Capitalizes the first letter of multiple words') do
+  it('it capitalizes the first letter of multiple words') do
     expect(("dog, bird, cat").title_case()).to(eq("Dog, Bird, Cat"))
   end
-end
 
-describe('String#title_case') do
-   it('Capitalize all words except prepositions') do
+   it('it capitalizes all words except prepositions') do
      expect(("dog and cat").title_case()).to(eq("Dog and Cat"))
    end
+
+   it('it capitalizes the first letter of the first word of a String') do
+     expect(("from dog to cat").title_case()).to(eq("From Dog to Cat"))
+   end
+
  end

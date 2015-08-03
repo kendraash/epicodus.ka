@@ -1,14 +1,11 @@
 class String
   define_method(:title_case) do
-    output=[]
-    small_words = ["a", "an", "and", "the", "but", "or", "for", "nor"]
+    small_words = ["a", "an", "and", "the", "but", "or", "for", "nor","to","from"]
     split_sentence=self.split()
+    split_sentence[0].capitalize!()
     split_sentence.each() do |word|
-      puts (small_words).include?(word).!()
     if (small_words).include?(word).!()
       word.capitalize!()
-    
-
     end
   end
     split_sentence.join(" ")
@@ -16,5 +13,4 @@ class String
 end
 
 
-#(small_words).include?(word)
-#split_sentence.push.(word)
+#puts (small_words).include?(word).!()
