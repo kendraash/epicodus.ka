@@ -21,4 +21,8 @@ describe('String#title_case') do
    it("it does not capitalize the non-letter characters of a String") do
      expect(("1 dog, 2 cats, and a bird!").title_case()).to(eq("1 Dog, 2 Cats, and a Bird!"))
    end
+
+   it("it lower-cases capital letters that are not the first letter of a word of a String") do
+     expect(("BIG DOG AND CAT").title_case()).to(eq("Big Dog and Cat"))
+   end
  end

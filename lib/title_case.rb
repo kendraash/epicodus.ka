@@ -7,7 +7,10 @@ class String
     if (small_words).include?(word).!() || ("a".."z").cover?(word).!()
       word.capitalize!()
     end
-  end
+    if ("A".."Z").cover?(split_sentence).!() && split_sentence[0].!()
+        word.downcase()
+    end
+    end
     split_sentence.join(" ")
   end
 end
