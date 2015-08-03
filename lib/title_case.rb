@@ -4,7 +4,7 @@ class String
     split_sentence=self.split()
     split_sentence[0].capitalize!()
     split_sentence.each() do |word|
-    if (small_words).include?(word).!()
+    if (small_words).include?(word).!() || ("a".."z").cover?(word).!()
       word.capitalize!()
     end
   end
